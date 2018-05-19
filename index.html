@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+
+   h1 {
+    font-size: 125px;
+    font-family: Monospace;
+	color:red;
+	text-align:center;
+  }
+  body{
+	background-color:silver;
+ </style>
+	
+	<script>
+			
+	function calculate(){
+		var num1 = parseInt(document.getElementsById('input02').value);
+		var num2 = parseInt(document.getElementsById('input03').value);
+		var resultBox = document.getElementById("result");
+		resultBox.innerHTML = '';
+
+		
+		var add = document.getElementById('n1');
+		var sub = document.getElementById('n2');
+		var multi = document.getElementById('n3');
+		var divis = document.getElementById('n4');
+		
+		if (add.checked == true){
+			resultBox.innerHTML = num1 + num2;
+		}
+		else{
+			if ( sub.checked == true){
+				resultBox.innerHTML = num1 - num2;
+			}
+			else{
+				if (multi.checked == true){
+					resultBox.innerHTML = num1 * num2;
+				}
+				else{
+					if (divis.checked == true){
+						resultBox.innerHTML =  num1 / num2;
+					}
+				}
+			}
+		}	
+	}
+	</script>
+
+<h1>Learning HTML & CSS</h1>
+
+<form>
+	<input id ="input02" type="number"  placeholder= "Enter 1st digit here" >
+	<input id ="input03" type="number"  placeholder= "Enter 2nd digit here" >
+
+	<label><input id="n1" type="radio" name="operation" >ADD</label>
+	<label><input id="n2" type="radio" name="operation" >SUB</label>
+	<label><input id="n3" type="radio" name="operation" >MUL</label>
+	<label><input id="n4" type="radio" name="operation" >DIV</label><br><br>
+	<button onclick="button02()">Calculate</button><br>
+ </form> 
+	 <p id="result"></p>
+
+</body>
+</html>
+
