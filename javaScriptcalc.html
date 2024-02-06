@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML & CSS(v1)</title>
+</head>
+<style>
+
+   h1 {
+    font-size: 125px;
+    font-family: Monospace;
+	color:red;
+	text-align:center;
+  }
+  body{
+	background-color:silver;
+ </style>
+	
+<body>
+<h1>"A SIMPLE CALCULATOR"</h1>
+Enter 1st digit here: <input type="number" id="q1" value=""/>
+</br></br></br>
+Enter 2nd digit here: <input type="number" id="q2" value=""/>
+</br></br></br>
+<form>
+	<input id="n1" type="radio" name="operation" >ADD</label>
+	<input id="n2" type="radio" name="operation" >SUB</label>
+	<input id="n3" type="radio" name="operation" >MUL</label>
+	<input id="n4" type="radio" name="operation" >DIV</label></br></br>
+	<button onclick="calculate()">Calculate</button><br>
+</form>	
+
+<script>
+	function calculate(){
+		var a=document.getElementById('q1').value;
+		var b=document.getElementById('q2').value;
+		var o=document.getElementsByName("operation");
+
+		if(o[0].checked==true){
+			alert("The Result is :" +a+ +b);
+
+		}
+		if(o[1].checked==true){
+					alert("The Result is :" +a - +b);
+
+		}
+		if(o[2].checked==true){
+					alert("The Result is :" +a * +b);
+
+		}
+		if(o[3].checked==true){
+					alert("The Result is :" +a / +b);
+
+		}
+	}
+</script>
+</body>
+</html>

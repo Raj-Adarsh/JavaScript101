@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML & CSS</title>
+	<h4>HELLO WORLD</h4><br>
+</head>
+<style>
+	h4 {
+    font-family: Lobster, Monospace;
+	color:red;
+	text-align:center;
+  }
+
+  body{
+	background-color:yellow;
+}
+</style>
+	
+	<script>
+		function button01(){
+			var opt01=input01.value;
+			if(opt01=="adarsh"){
+			javascript:alert('Hello World ADARSH!');				
+			}				 
+		    else if(opt01=="pallavi"){
+			javascript:alert('Hello World PALLAVI!');	
+			}
+			else{
+			javascript:alert('Hello World!');		
+			}
+		}	
+		
+		function calculate(){
+		var a=document.getElementById('q1').value;
+		var b=document.getElementById('q2').value;
+		var o=document.getElementsByName("operation");
+
+		if(o[0].checked==true){
+			alert(+a+ +b);
+
+		}
+		if(o[1].checked==true){
+					alert(+a - +b);
+
+		}
+		if(o[2].checked==true){
+					alert(+a * +b);
+
+		}
+		if(o[3].checked==true){
+					alert(+a / +b);
+
+		}
+	}
+			
+</script>
+
+<input id ="input01" type="text"  placeholder= "Enter here" >
+<button onclick="button01()">Submit</button><br><br><br><br><br>
+<p id="message01"</p><br><br><br><br><br><br>
+
+
+<h4>"A SIMPLE CALCULATOR"</h4>
+Enter 1st digit here: <input type="number" id="q1" value=""/>
+</br></br></br>
+Enter 2nd digit here: <input type="number" id="q2" value=""/>
+</br></br></br>
+
+	<input id="n1" type="radio" name="operation" >ADD</label>
+	<input id="n2" type="radio" name="operation" >SUB</label>
+	<input id="n3" type="radio" name="operation" >MUL</label>
+	<input id="n4" type="radio" name="operation" >DIV</label></br></br>
+	<button onclick="calculate()">Calculate</button><br>
+</body>
+</html>
